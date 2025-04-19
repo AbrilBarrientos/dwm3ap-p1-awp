@@ -22,7 +22,7 @@ function mostrarFavoritos() {
 }
 
 function eliminarFavorito(indice) {
-    listaFavoritos.splice(indice, 1);
+    listaFavoritos.splice(indice, 1); //splice elimina el elemento a partir del indice 1
     localStorage.setItem('favoritos', JSON.stringify(listaFavoritos));
     mostrarFavoritos();
 }
