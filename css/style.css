@@ -1,0 +1,240 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #818181;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100px;
+}
+
+header .logo {
+    height: 40px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+footer {
+    background-color: #2d2d2d;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 1em;
+}
+
+  /* Main Section */
+main {
+    padding: 20px;
+    max-width: 1720px;
+    margin: 0 auto;
+}
+
+i{
+    margin-right: 7px;
+}
+
+  /* Buscador */
+#buscador {
+    text-align: center;
+    width: 70%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#buscador:focus {
+    border-color: #f39c12;
+    outline: none;
+}
+
+#peliculas{
+    text-align: center;
+}
+
+  /* Tarjetas de Películas */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 350px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    margin: 10px;
+    display: inline-block; /* Permite que las tarjetas se alineen de manera más flexible */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Asegura que la imagen cubra el espacio de la tarjeta sin distorsionarse */
+    border-bottom: 2px solid #f39c12;
+}
+
+
+
+.card h3 {
+    margin: 15px 0;
+    font-size: 18px;
+    color: #333;
+    padding: 0 10px; /* Asegura que el texto no quede pegado a los bordes */
+}
+
+.card-footer button {
+    margin: 0;
+    background-color: #f39c12;
+    color: white;
+    padding: 13px 14px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background-color 0.3s;
+}
+
+.card-footer{
+    justify-content: space-between;
+    padding: 20px 10px;
+    display: flex;
+}
+.card-footer i{
+    margin-right: 3px;
+}
+
+  /* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo translúcido */
+    display: none; /* Se oculta por defecto */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Asegura que el modal esté por encima del contenido */
+}
+
+/* Contenido del Modal */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Mostrar el modal cuando se activa */
+.modal:not(.oculto) {
+    display: flex;
+}
+
+/* Estilo de la Imagen en el Modal */
+.modal-content img {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+    margin: 15px auto;
+}
+
+/* Botón Cerrar Modal */
+.modal-content button {
+    background-color: #f39c12;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+
+
+  /* Favoritos */
+.card button{
+    margin: 5px 0 15px 0;
+    background-color: #f39c12;
+    color: white;
+    padding: 13px 14px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background-color 0.3s;
+}
+
+.card button:last-child {
+    margin-right: 0;
+}
+
+.card button:hover {
+    background-color: #e62222;
+}
+
+  /* Mensajes de Error */
+.error {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#favoritos{
+    text-align: center;
+}
+
+
+
+
+  /* Ajustes Responsivos para Móviles */
+@media (max-width: 768px) {
+    .card {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+}
